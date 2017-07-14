@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.atmshang.procrastination"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'atmshang'
+            keyPassword 'Crino233'
+            storeFile file('../key.jks')
+            storePassword 'Crino233'
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            applicationVariants.all { variant ->
+                if (variant.buildType.name == "release") {
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            def fileName = "ZYSofa_V${defaultConfig.versionName}" +
+                                    ".apk"
+                            output.outputFile = new File(outputFile.parent, fileName)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':toolkit')
+}

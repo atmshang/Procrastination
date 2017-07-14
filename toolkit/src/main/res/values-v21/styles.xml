@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="actionBarSize">48dp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.Navigation" parent="AppTheme.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+</resources>

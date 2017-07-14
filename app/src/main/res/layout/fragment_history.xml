@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_coordinator_header" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <include layout="@layout/toolbar_immerse_scrollable" />
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <com.atmshang.toolkit.view.LoadLayout
+            android:id="@+id/loadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:id="@+id/fl_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:maxLines="1"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <View
+                    android:clickable="true"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </com.atmshang.toolkit.view.LoadLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
+
+
+
+
+
+
+

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.atmshang.toolkit.view.RevealLayout
+            android:id="@+id/rl_process"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6889FF" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#3B50CE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:id="@+id/tv_process_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自定义"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </com.atmshang.toolkit.view.RevealLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent" />
+
+        <com.atmshang.toolkit.view.RevealLayout
+            android:id="@+id/rl_procrastinate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_procrastinate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拖延的时间"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </com.atmshang.toolkit.view.RevealLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="@color/white"
+                    app:elevation="0dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/transparent"
+                    app:srcCompat="@drawable/ic_more_horiz_black_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="@color/white"
+                    app:elevation="0dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/transparent"
+                    app:srcCompat="@drawable/ic_loop_black_24dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_controller"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:tint="@color/white"
+            app:elevation="0dp"
+            app:fabSize="normal"
+            app:rippleColor="@color/transparent"
+            app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+    </FrameLayout>
+</FrameLayout>
